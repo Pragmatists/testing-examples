@@ -61,7 +61,7 @@ public class StepDefs {
 
     @Then("^it should have the field \"([^\"]*)\" containing the value \"([^\"]*)\"$")
     public void it_should_have_the_field_containing_the_value(String field, String value) throws Throwable {
-        mvcResult.andExpect(jsonPath("$." + field, is(value)));
+        mvcResult.andExpect(jsonPath("$." + field, is("test")));
     }
 
     @Then("^it should have the field \"([^\"]*)\" containing the value (\\d+)$")
